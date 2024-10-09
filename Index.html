@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zaw</title>
+
+</head>
+<body>
+    <style>
+        body {
+            font-family: sans-serif ;
+            background-color: #1a1a1a;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            text-align: right;
+        }
+
+        .knopi {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            z-index: 2;
+        }
+
+        .knopi button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #444;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .knopi button:hover {
+            background-color: #666;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            text-align: left;
+        }
+
+        .text-content {
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+
+        .cta-button {
+            padding: 10px 20px;
+            border-radius: 9px;
+            border: 2px solid white;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        .image-content img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .ti {
+            margin-top: 20px;
+        }
+
+        .home {
+            border-radius: 9px;
+            border: 2px solid white;
+        }
+
+        .w2, .w1, .w3 {
+            position: absolute; 
+            left: 0; 
+            width: 100%; 
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .w2 img, .w1 img, .w3 img {
+            height: auto; 
+            width: 100%; 
+            display: block;
+            margin: 0 auto; 
+        }
+
+        .w2 img {
+            max-height: 300px;
+            top: 0; 
+        }
+
+        .w1 img {
+            max-height: 150px; 
+            top: 0; 
+        }
+
+        .w3 img {
+            max-height: 200px; 
+            top: 0; 
+        }
+
+        @keyframes float {
+            0% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(0, -20px);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+  
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                padding: 20px;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .knopi {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .w1, .w2, .w3 {
+                margin: 0;
+            }
+
+            .w1 img, .w2 img, .w3 img {
+                width: 100%; 
+            }
+
+            .ti {
+                margin-left: 0;
+                text-align: center;
+            }
+        }
+
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            h1 {
+                font-size: 2.2em;
+            }
+
+            .knopi {
+                top: 15px;
+            }
+
+            .container {
+                flex-direction: column;
+            }
+        }
+
+        
+        @media (min-width: 1025px) {
+            .container {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 50px;
+            }
+
+            .text-content {
+                max-width: 600px;
+            }
+
+            .image-content {
+                margin-left: 50px;
+            }
+
+            h1 {
+                font-size: 3.2em;
+            }
+        }
+        .cta-button {
+    padding: 10px 20px;
+    border-radius: 9px;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+    </style>
+    <header>
+        <div class="w2">
+            <img src="01/v1.png" alt="Wave Image">
+        </div>
+        <div class="w1">
+            <img src="01/v3.png" alt="Floating Image">
+        </div>
+        <div class="w3">
+            <img src="01/v2.png" alt="Second Floating Image">
+        </div>
+        <nav>
+            <ul>
+                <div class="knopi">
+                    <div class="home"><li><a href="#">Home</a></li></div>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Package</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact</a></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="image-content">
+            <img src="01/7163137_0004s_0000_Place-Your-Image-Here(Double-Click).png" alt="Person on electric scooter">
+        </div>
+        <div class="text-content">
+            <h1>We Would Love <br> To Move You</h1>
+            <p>You Gonna Love This</p>
+            <p>Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text since the 1500s.</p>
+            <a href="#" class="cta-button">Shop Now</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 ScooterElectric</p>
+        <div class="ti">
+            <p>Follow us: 
+                <a href="#"> <img src="01/7163137_0002s_0000s_0002_Twitter.png" width="35px" height="25px"> </a> |
+                <a href="#"> <img src="01/7163137_0002s_0000s_0001_Instagram.png" width="35px" height="25px"></a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
